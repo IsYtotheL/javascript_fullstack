@@ -1,0 +1,47 @@
+/*初始化  margin padding*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*.container相对于副容器的height%*/
+#page-one{
+    background-color:yellow;
+    text-align: center;
+    /*height: 100%;*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+}
+/*按钮 舍弃默认outline border*/
+button{
+outline: none;
+border: 1px solid transparent;/*透明*/
+padding: 6px 12px;/*增大按钮大小上下6 左右12*/
+background-color: #428bca;
+width: 300px;
+}
+/*拉开距离*/
+#page-one h1{ /*标题*/
+margin-top: 100px;/*外边距*/
+}
+#page-one p{  /*段落*/
+    margin-top: 100px;
+}
+#page-one button{  /*按钮*/
+    margin-top: 200px;
+}
+.screen{
+    margin-top: 10px;
+   /* display: flex;*/
+
+}
+.screen .block {
+    float: left;/*浮上去 放不下了  然后往下放*/
+    margin: 1px;/*间隙*/
+    height: 200px;
+    width: 49%;
+    background-color: red;
+}
