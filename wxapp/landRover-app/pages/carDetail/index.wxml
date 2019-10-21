@@ -1,0 +1,8 @@
+<!--pages/carDetail/index.wxml-->
+<view>
+   <text>{{ id }}</text>
+   <view>
+       {{ car.meta.price }}
+   </view>
+      
+</view>
