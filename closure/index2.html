@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // for (var i = 0;i < 10; i++) {
+    //     setTimeout(() => {
+    //         document.write(i + ' ')
+    //     }, 0)
+    // }
+//     function test() {
+//         var arr = []
+//     for (var i = 0; i < 10; i++) {
+//         arr[i] = function() { //引用  相当于arr[i] = 函数  浏览器只能知道有一个function
+//             document.write(i + ' ')//不是调用  此行代码不生效   i = 10 
+//         }
+//     }
+//     return arr
+//     }
+//     var myArr = test()
+//  for (var j = 0; j < 10; j++) {
+//      myArr[j]()//调用时  上一个for循环已经执行完了  i=10
+//  }
+function test() {
+        var arr = []
+    for (var i = 0; i < 10; i++) {
+        // arr[i] = function() { 
+        //     document.write(i + ' ')
+        // }
+       // arr[i]()// 法1：加一个函数的调用
+       (function(j) {
+           // var j = 0
+           //j = 0,1,2,3...
+    arr[j] = function() { 
+           document.write(j + ' ')
+         }
+       })(i)
+    }
+    return arr
+    }
+    var myArr = test()
+ for (var j = 0; j < 10; j++) {
+     myArr[j]()
+ }
+
+    </script>
+</body>
+</html>

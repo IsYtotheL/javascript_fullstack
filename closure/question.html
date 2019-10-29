@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+*{margin: 0;padding: 0;}
+ul li{
+    list-style: none;
+}
+li:nth-child(n) {
+    background-color: aquamarine;
+}
+li:nth-child(2n) {
+    background-color: gray;
+}
+</style>
+<body>
+    <ul>
+        <li class="lia">a</li>
+        <li class="lia">a</li>
+        <li class="lia">a</li>
+        <li class="lia">a</li>
+    </ul>
+   <!-- <script>
+    function test() {
+        var liCollection = document.getElementsByTagName('li')
+        console.log(liCollection)
+        for (var i = 0; i < liCollection.length; i++) {
+            (function(j){
+                liCollection[j].addEventListener('click',function(){
+                console.log(j)
+                })
+            })(i)
+        
+        }
+    }
+    
+    test()
+   </script> -->
+   <script>
+    function click() {
+        var a = document.getElementsByClassName('lia')
+        console.log(a)
+        for (var i = 0; i < a.length; i++) {
+            (function(j){
+                a[j].addEventListener('click',function(){
+                console.log(j)
+                })
+            })(i)
+           
+        }
+    }
+    click()
+   </script>
+    
+</body>
+</html>
