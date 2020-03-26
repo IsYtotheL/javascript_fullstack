@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="sad.css">
+  <title>Document</title>
+</head>
+<script language='javascript' type='text/javascript'>
+ // document.getElementById("div3").style.display="none";
+setTimeout(function a(){
+ document.getElementById("div1").style.display="none";
+},2900)
+setTimeout(function b(){
+ document.getElementById("div2").style.display="none";
+},2900)
+setTimeout(function d(){
+ document.getElementById("div3").style.visibility="visible";
+},3000)
+setTimeout(function e(){
+ document.getElementById("div3").style.visibility="hidden";
+},0)
+$(function(){
+setTimeout(function c(){
+ $("div3").show();
+},3000)
+})
+// $(document).ready(
+//   function() {
+//     $('#div3').delay(800).hide(0);
+//   }
+// )
+
+</script>
+<body>
+  <div id="div1"><img src="image/598.jpg" width="169.35" height="226.5" margin="100"></div>
+  <div id="div2"> <img src="image/1.jpg" width="85" height="253.5" margin="200"></div>
+  <div id="div3"> <img src="image/222.jpg" width="400" height="280.5" margin="200"></div>
+</body>
+</html>

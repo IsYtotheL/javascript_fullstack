@@ -1,0 +1,40 @@
+#div2{
+  position: relative;
+  padding-top: 100px;
+  padding-right: 40px;
+  float: right;
+  animation: close 3s ease infinite
+}
+@keyframes close{
+  0%{
+    transform: translate(0)
+  }
+  100%{
+    transform: translate(-390px)
+  }
+}
+#div1{
+  position: relative;
+  padding-top: 100px;
+  padding-right: 40px;
+  float: left;
+  animation: together 3s ease infinite;
+}
+@keyframes together{
+  0%{
+    transform: translate(0)
+  }
+  100%{
+    transform: translate(390px)
+  }
+}
+body{
+  background-color: black
+}
+#div3{
+  padding-top: 70px;
+  padding-right: 500px;
+  position: relative;
+  float: left;
+  left: 35%;
+}
