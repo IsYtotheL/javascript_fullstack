@@ -79,6 +79,7 @@ higher order Component
 3. 捕获 | 劫持被处理的生命周期
 
 - npm i @babel/plugin-proposal-decorators
-- yarn eject
+
 - git add
 - git commit -m 'test'
+- yarn eject
