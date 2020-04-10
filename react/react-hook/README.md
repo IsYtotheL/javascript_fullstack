@@ -66,29 +66,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# HOC
-higher order Component
-
-# 函数
-是对公共 html css state 的一个抽象
-
-# 高阶组件
-是对 各个组件中 公共逻辑的一个抽像
-1. 防止重复的代码
-2. 条件渲染， 控制组件的渲染逻辑（渲染劫持)
-3. 捕获 | 劫持被处理的生命周期
-
-- npm i @babel/plugin-proposal-decorators
-
-- 在创建 React 项目之后，使用 npm run eject 或者yarn eject命令报错：This git repository has untracked files or uncommitted changes
-
-原因:
-因为在初始化项目之后，该项目并没有本地 git 仓库，而此项目目录下又有 .gitignore 文件，所以此时会向上级寻找未提交的项目。
- 
- 解决方法:
- git init
- git add .
- git commit -m 'xxx'
-
-
-

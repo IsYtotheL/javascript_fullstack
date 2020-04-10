@@ -1,15 +1,18 @@
-// 路口文件
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './component/example1/index';
-import Example2 from './component/example2/index'
-import Example3 from './component/example3/index'
+//import App from './App';
+//import Demo1 from './component/useState/indexHook'
+//import Example from './component/useEffect/makeUnmount'
+// import Demo3 from './component/useContext/indexHook'
+// import Demo4 from './component/useReducer/index'
+// import Demo5 from './component/useMemo/index'
+import Demo6 from './component/useRef/anotherUse'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Example3 />
+    <Demo6 />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,7 +1,7 @@
 // 最新高阶组件
 import React, { Component } from 'react'
 // HOC 
-function HOC (wrappeedComponent) {
+function HOC (WrappedComponent) {
   return class extends Component {
     constructor (props) {
       super(props)
@@ -11,10 +11,12 @@ function HOC (wrappeedComponent) {
     }
 // 怎么让高阶组件的onChange 方法作用于弟弟组件
     onChange = (event) => {
+      // this.setState 在*这里*是异步的
+      // this.setState 在不同场景下 可异步可同步
       this.setState({
         name: event.target.value
       })
-      // console.log()
+       console.log(this.state.name)
     }
     render () {
       const newProps = {
@@ -23,7 +25,7 @@ function HOC (wrappeedComponent) {
           onChange: this.onChange
         }
       }
-      return <wrappeedComponent {...newProps}/>
+      return <WrappedComponent {...newProps}/>
     }
   }
 }

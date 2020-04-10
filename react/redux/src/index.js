@@ -1,15 +1,12 @@
-// 路口文件
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './component/example1/index';
-import Example2 from './component/example2/index'
-import Example3 from './component/example3/index'
+// import './index.css';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Example3 />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
