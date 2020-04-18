@@ -69,3 +69,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 - yarn add redux
+
+# reduc
+1. 实现todoList
+2. 加入redux
+3. actionType 整合
+4. 使用 actionCreator 统一创建 action

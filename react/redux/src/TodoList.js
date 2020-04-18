@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 import { Input, List, Button } from 'antd'
 import 'antd/dist/antd.css'
 import store from './store/index.js'
-import {CHANGE_INPUT_VALUE} from './store/actionTypes'
+ import {CHANGE_INPUT_VALUE} from './store/actionTypes'
+import {getInputChangeAction} from './store/actionCreators'
 // store 的创建
 class TodoList extends Component {
   constructor (props) {
@@ -17,10 +18,11 @@ class TodoList extends Component {
   }
 
   handleInputChange (e) {
-    const action = {
-      type: CHANGE_INPUT_VALUE ,
-      value: e.target.value
-    }
+    // const action = {
+    //   type: CHANGE_INPUT_VALUE ,
+    //   value: e.target.value
+    // }
+    const action = getInputChangeAction(e.target.value)
     store.dispatch(action) //让管理员听到这句话
   }
   handleStoreChange (e) {
