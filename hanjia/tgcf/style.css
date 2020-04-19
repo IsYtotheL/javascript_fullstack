@@ -160,3 +160,100 @@ body {
   z-index: 1;
 }
 
+@-webkit-keyframes hover {
+        0% {
+          -webkit-transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateZ(0px);
+                  transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateZ(0px);
+        }
+        100% {
+          -webkit-transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateZ(-3px);
+                  transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateZ(-3px);
+        }
+      }
+      
+      @keyframes hover {
+        0% {
+          -webkit-transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateZ(0px);
+                  transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateZ(0px);
+        }
+        100% {
+          -webkit-transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateZ(-3px);
+                  transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateZ(-3px);
+        }
+      }
+      @-webkit-keyframes shadow {
+        0% {
+          -webkit-transform: translateX(-40px) translateY(100px) scale(1, 1);
+                  transform: translateX(-40px) translateY(100px) scale(1, 1);
+        }
+        100% {
+          -webkit-transform: translateX(-40px) translateY(100px) scale(1.1, 1.1);
+                  transform: translateX(-40px) translateY(100px) scale(1.1, 1.1);
+        }
+      }
+      @keyframes shadow {
+        0% {
+          -webkit-transform: translateX(-40px) translateY(100px) scale(1, 1);
+                  transform: translateX(-40px) translateY(100px) scale(1, 1);
+        }
+        100% {
+          -webkit-transform: translateX(-40px) translateY(100px) scale(1.1, 1.1);
+                  transform: translateX(-40px) translateY(100px) scale(1.1, 1.1);
+        }
+      }
+      @-webkit-keyframes leftflap {
+        0% {
+          -webkit-transform: rotateY(-20deg);
+                  transform: rotateY(-20deg);
+        }
+        100% {
+          -webkit-transform: rotateY(90deg);
+                  transform: rotateY(90deg);
+        }
+      }
+      @keyframes leftflap {
+        0% {
+          -webkit-transform: rotateY(-20deg);
+                  transform: rotateY(-20deg);
+        }
+        100% {
+          -webkit-transform: rotateY(90deg);
+                  transform: rotateY(90deg);
+        }
+      }
+      @-webkit-keyframes rightflap {
+        0% {
+          -webkit-transform: rotateY(200deg);
+                  transform: rotateY(200deg);
+        }
+        100% {
+          -webkit-transform: rotateY(90deg);
+                  transform: rotateY(90deg);
+        }
+      }
+      @keyframes rightflap {
+        0% {
+          -webkit-transform: rotateY(200deg);
+                  transform: rotateY(200deg);
+        }
+        100% {
+          -webkit-transform: rotateY(90deg);
+                  transform: rotateY(90deg);
+        }
+      }
+      .twitter {
+        background: #4099FF;
+        border-radius: 5px;
+        bottom: 5px;
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 13px;
+        padding: 5px 10px;
+        position: absolute;
+        right: 5px;
+        text-decoration: none;
+      }
+      .twitter:hover {
+        background: #4fa1ff;
+      }
+      

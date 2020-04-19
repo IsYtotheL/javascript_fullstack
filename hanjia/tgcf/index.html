@@ -9,34 +9,34 @@
   <title>hl</title>
 </head>
 <style>
-    .point {
-      width: 50px;
-      height: 50px;
-      background-color: #2ea598;
+    /* .point {
+      width: 10px;
+      height: 10px;
+      background-color: white;
       position: relative;
       border-radius: 50%;
-    }
+    } */
    
     /* 设置动画前颜色 */
     .point-flicker:after {
-      background-color: #2ea598;
+      background-color: #ffffff;
     }
    
     /* 设置动画后颜色 */
     .point-flicker:before {
-      background-color: rgba(0, 168, 253, 0.2);
+      background-color: white;
     }
    
     /* 设置动画 */
     .point-flicker:before,
     .point-flicker:after {
       content: '';
-      width: 80px;
-      height: 80px;
+      width: 10px;
+      height: 10px;
       position: absolute;
       left: 50%;
       top: 50%;
-      margin-left: -40px;
+      margin-left: -300px;
       margin-top: -40px;
       border-radius: 50%;
       /* CSS3 animation 属性 网址 */
@@ -63,9 +63,7 @@
   </style>
    
 <body>
-    <div class="point point-flicker">
-   
-    </div>
+
   
 
 
@@ -109,6 +107,7 @@
         </div>
     </div>
     <div class="shadow"></div>
+    <div>  <div class="point point-flicker"> </div>
 </body>
 </html>
 
