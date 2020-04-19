@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>hl</title>
+</head>
+<style>
+    .point {
+      width: 50px;
+      height: 50px;
+      background-color: #2ea598;
+      position: relative;
+      border-radius: 50%;
+    }
+   
+    /* 设置动画前颜色 */
+    .point-flicker:after {
+      background-color: #2ea598;
+    }
+   
+    /* 设置动画后颜色 */
+    .point-flicker:before {
+      background-color: rgba(0, 168, 253, 0.2);
+    }
+   
+    /* 设置动画 */
+    .point-flicker:before,
+    .point-flicker:after {
+      content: '';
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -40px;
+      margin-top: -40px;
+      border-radius: 50%;
+      /* CSS3 animation 属性 网址 */
+      /* https://www.w3school.com.cn/cssref/pr_animation.asp */
+      animation: warn 1.5s ease-out 0s infinite;
+    }
+   
+    /* @keyframes 规则用于创建动画。在 @keyframes 中规定某项 CSS 样式，就能创建由当前样式逐渐改为新样式的动画效果。 */
+    @keyframes warn {
+      0% {
+        transform: scale(0.5);
+        opacity: 1;
+      }
+   
+      30% {
+        opacity: 1;
+      }
+   
+      100% {
+        transform: scale(1.4);
+        opacity: 0;
+      }
+    }
+  </style>
+   
+<body>
+    <div class="point point-flicker">
+   
+    </div>
+  
+
+
+  <div class="butterfly">
+    <!-- ::before -->
+    <div class="wing">
+      <div class="bit">
+        <!-- ::after -->
+      </div>
+      <div class="bit">
+        <!-- ::after -->
+      </div>
+    </div>
+    <div class="wing">
+        <div class="bit">
+          <!-- ::after -->
+        </div>
+        <div class="bit">
+          <!-- ::after -->
+        </div>
+      </div>
+  </div>
+  <div class="shadow"></div>
+  <div class="butterfly">
+      <!-- ::before -->
+      <div class="wing">
+        <div class="bit">
+          <!-- ::after -->
+        </div>
+        <div class="bit">
+          <!-- ::after -->
+        </div>
+      </div>
+      <div class="wing">
+          <div class="bit">
+            <!-- ::after -->
+          </div>
+          <div class="bit">
+            <!-- ::after -->
+          </div>
+        </div>
+    </div>
+    <div class="shadow"></div>
+</body>
+</html>
+
