@@ -1,4 +1,5 @@
 import { fromJS } from 'immutable'
+import * as constants from './constants'
 // immutable.js
 // facebook
 // immutable对象 // 不可改变对象
@@ -56,5 +57,19 @@ const defaultState = fromJS({
 
 
 export default (state = defaultState, action) => {
-  return state
+  switch(action.type) {
+    case constants.CHANGE_HOME_DATA:
+      return state.merge({ //把多个对象合并成一个对象
+        topicList: fromJS(action.topicList),
+        articleList: fromJS(action.articleList),
+        recommendList: fromJS(action.recommendList)
+
+
+      })
+      // set('topicList',fromJS(action.topicList))
+    console.log(action)
+    default: 
+    return state
+  }
+  
 }

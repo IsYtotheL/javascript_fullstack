@@ -3,7 +3,9 @@ import Topic from './components/Topic'
 import List from './components/List'
 import Writer from './components/Writer'
 import Recommend from './components/Recommend'
-import axios from 'axios'
+
+import { connect } from 'react-redux' 
+import { actionCreators } from './store'
 import { 
   HomeWrapper,
   HomeLeft,
@@ -11,9 +13,7 @@ import {
 
 class Home extends Component {
   componentDidMount () {
-    axios.get('/api/home.json').then((res) => {
-      console.log(res)
-    })
+    this.props.changeHomeData()
   }
   render () {
     return (
@@ -32,4 +32,11 @@ class Home extends Component {
   }
 }
 
-export default Home
+const mapDispatch = (dispatch) => ({
+  changeHomeData () {
+    const action = actionCreators.getHomeInfo()
+    // dispatch(action)
+    action(dispatch)
+  }
+}) 
+export default connect(null,mapDispatch)(Home)
