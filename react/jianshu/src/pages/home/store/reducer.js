@@ -52,7 +52,9 @@ const defaultState = fromJS({
     //   id:2,
     //   imgUrl: 'https://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png',
     // }
-  ]
+  ],
+  articlePage: 1,
+  showScroll:false
 })
 
 
@@ -66,8 +68,16 @@ export default (state = defaultState, action) => {
 
 
       })
+      case constants.ADD_ARTICLE_LIST:
+      return state.merge({
+        articleList:state.get('articleList').concat(action.list),
+        articlePage: action.nextPage
+      })
+      case constants.TOGGLE_SCROLL_TOP:
+        return state.set('showScroll',action.show)
+        //return state.set('articleList',state.get('articleList').concat(action.list))
       // set('topicList',fromJS(action.topicList))
-    console.log(action)
+    // console.log(action)
     default: 
     return state
   }
