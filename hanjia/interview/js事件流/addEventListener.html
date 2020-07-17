@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div id="wrapper">666</div>
+  </div>
+  <script>
+  var app = document.getElementById('app')
+  app.addEventListener(
+  'click',
+  function(event) {
+    console.log('app')
+  },
+  false ////wrapper app
+  //true //app wrapper
+  // 都为false 冒泡比捕获更高  默认false //wrapper app 
+)
+var wrapper = document.getElementById('wrapper')
+wrapper.addEventListener(
+  'click',
+  function(event) {
+    //阻止冒泡 写在冒泡前3的容器上
+    event.stopImmediatePropagation() //阻止所有
+    //event.stopPropagation()  //只阻止冒泡
+    console.log('wrapper')
+  },
+  true//wrapper app
+  // false // app wraper
+  // 都为true 捕获比冒泡更大
+)
+</script>
+</body>
+</html>

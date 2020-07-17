@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app" >
+    <input type="text" id="txt">
+    <p id ="show-txt">0</p>
+  </div>
+  <script>
+  // vue 中的 V-model
+  // Object.defineProperty() // js自带，方法会直接在一个对象上定义一个新属性
+  // var a = {}    a.name = "wn"
+
+  // v-model 的实现原理
+  var obj = {
+    name: 'wn'
+  }
+  Object.defineProperty(obj, 'txt',{
+    get () {  //往obj中取数据的
+      return obj
+    },
+    set (newVal) { //往obj中存数据的
+      document.getElementById('show-txt').innerHTML = newVal
+    }
+  })
+  document.addEventListener('keyup',function(e) {
+    console.log(e)
+    obj.txt = e.target.value
+
+  })
+  </script>
+</body>
+</html>

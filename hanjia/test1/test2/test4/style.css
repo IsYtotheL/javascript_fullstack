@@ -1,0 +1,112 @@
+.title{
+  color:white;
+  font-size: 52px;
+  /* float: left; */
+  font-family: cursive;
+  background-color: #ffdccc;
+  width: 100%;
+  height:60px ;
+  text-align: center;
+  vertical-align: middle;
+  /* background: url("../img/computer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;  */
+   
+}
+.all {
+  width:98.3%;
+  height:100%;
+  border:5px rgb(198, 250, 193) solid;
+  position: absolute;
+  top:108px;
+  color: rgb(255, 51, 51);
+
+  
+  /* float: left; */
+}
+.all a {
+  /* position: absolute; */
+  /* word-wrap: break-word */
+  /* float: left; */
+  display: block;
+  text-decoration: none;
+color:black;
+font-family: cursive;
+width: 120px;
+font-size: 20px;
+/* line-height: 40px; */
+  
+}
+.exitBar{
+  
+  background:linear-gradient(to top left, rgb(162, 253, 185), rgb(255, 220, 206));
+  width: 100%;
+  height:40px;
+  line-height: 40px;
+ 
+}
+.exitBar a {
+  position: absolute;
+  left: 1450px;
+  color: rgb(255, 51, 51);
+  /* top:10px; */
+  font-weight: 700;
+}
+.backBar {
+  background-color: rgb(215, 255, 229);
+  width:100%;
+  color: black;
+  height:30px;
+  line-height: 30px;
+  font-weight: 600
+}
+.bar {
+  position: absolute;
+  top:400px;
+}
+#main1{
+  font-size: 17.5px;
+  color: black
+}
+#main2{
+  font-size: 17.5px;
+}
+.list {
+  border:5px  rgb(206, 252, 202) solid;
+  width:195px;
+  height: 95%;
+  position: absolute;
+  top:25px;
+}
+.info {
+  border:9px rgb(206, 252, 202) solid;
+  /* position: absolute; */
+  float: right;
+  width:85.5%;
+  height: 95%;
+  margin-top: 25px;
+}
+.backBar span {
+  /* display: block;
+  /* margin-left: 500px; 
+  color: blueviolet;
+  float: right;
+  margin:  */
+  text-align: center;
+  position: absolute;
+  top: 112px;
+  left: 250px;
+}
+.backBar a {
+  position: absolute;
+  left: 1450px;
+  color: rgb(255, 51, 51);
+
+}
+.body {
+  background-color: rgb(176, 255, 229)
+}
+.info{
+  background-color: rgb(220, 255, 231)
+}
