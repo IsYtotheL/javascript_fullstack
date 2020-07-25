@@ -1,5 +1,5 @@
 'use strict';
-
+// router.js用于统一所有路由规则
 /**
  * @param {Egg.Application} app - egg application
  */

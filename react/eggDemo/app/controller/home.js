@@ -32,6 +32,7 @@ class HomeController extends Controller {
   }
   async add() {
     const {ctx} = this
+    //客服端传过来  前端以请求体带参数的形式
     const params = {
       ...ctx.request.body
     }
