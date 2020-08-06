@@ -1,0 +1,3 @@
+- npm init
+-  npm i jquery
+- npm i webpack webpack-cli -g

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" href="./css/index.css">
+  <title>笔记本</title>
+</head>
+<body>
+  <section id="todoapp">
+    <header class="header">
+      <h1>一二记事本</h1>
+      <input autofocus="autofocus" autocomplete="off" placeholder="请输入任务" class="new-todo" />
+
+    </header>
+    <section class="main"></section>
+    <footer class="footer"></footer>
+
+  </section>
+  <footer class="info">
+
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el:"#todoapp"
+    })
+  </script>
+</body>
+</html>
