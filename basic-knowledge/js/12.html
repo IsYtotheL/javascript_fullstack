@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="12.js"></script>
+</head>
+<body>
+  <script>
+    console.log(url); //url is not defined
+    var i = 99;
+    
+    for(var i = 0; i < 5; i++) {
+      console.log(i); //0 1 2 3 4
+    }
+    // var 没有块级作用域 
+    //解决办法: let
+    console.log(i);//5
+  </script>
+</body>
+</html>

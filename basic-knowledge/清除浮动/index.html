@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>clear:both</title>
+  <style>
+    .one{
+      background-color: blue;
+      height: 200px;
+      width: 60px;
+      float: left;
+    }
+    .two{
+      background-color: red;
+      height: 250px;
+      width: 50px;
+      float: left;
+    }
+    .box{
+      background-color: black;
+    }
+    .clear {
+      clear: both;  /*清除浮动*/
+    }
+    .footer {
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="one">一</div>
+    <div class="two">二</div>
+    <div class="clear"></div><!--  清除浮动  -->
+  </div>
+  <div class="footer">之下</div>
+</body>
+</html>

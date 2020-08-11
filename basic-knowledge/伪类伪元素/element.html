@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>伪元素</title>
+</head>
+<style>
+    p.article::first-letter
+  {
+    color: aqua;
+  }
+  p.article::first-line
+  {
+    color: blueviolet;
+  }
+  h1::before {
+    content:url(1.jpg)
+  }
+  h2::after {
+    content:url(1.jpg)
+  }
+</style>
+<body>
+  <p>nothing is here</p>
+  <p class="article"> this is a paragraph in an article,this is a paragraph in an article,
+      this is a paragraph in an article,this is a paragraph in an article,
+      this is a paragraph in an article,this is a paragraph in an article,this is a paragraph in an article,
+      this is a paragraph in an article,this is a paragraph in an article,this is a paragraph in an article,
+      this is a paragraph in an article,this is a paragraph in an article,this is a paragraph in an article
+  </p>
+  <h1>一级标题</h1>
+  <h2>二级标题</h2>
+</body>
+</html>

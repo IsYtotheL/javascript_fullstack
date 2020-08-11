@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const web = "isytothel";
+    var a = "tfboys";
+    let b = "hello"
+    // 函数当中可以访问外部全局变量
+    function show() {
+      var web = "aah"
+      console.log(web + a + b);//aahtfboyshello
+    }
+    show();
+    console.log(web + a + b); //isytotheltfboyshello
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>伪元素清除浮动</title>
+  <style>
+     .box{
+      width: 800px;
+      border: 1px solid black;
+      margin: 0 auto;
+    }
+    .one{
+      background-color: blue;
+      height: 200px;
+      width: 60px;
+      float: left;
+    }
+    .two{
+      background-color: red;
+      height: 250px;
+      width: 50px;
+      float: left;
+    }
+    .footer {
+      background-color: blueviolet;
+    }
+    .clearfix::before,.clearfix::after {
+      content: "";
+      display: table;
+    }
+    .clearfix::after {
+      clear: both;
+    }
+    .clearfix { 
+      *zoom:1;
+    }
+  </style>
+</head>
+<body>
+  <div class="box clearfix">
+    <div class="one">一</div>
+    <div class="two">二</div>
+  </div>
+  <div class="footer">之下</div>
+</body>
+</html>
