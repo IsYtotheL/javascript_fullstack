@@ -1,0 +1,23 @@
+#screen{
+  width: 999px;
+  height: 999px;
+  animation: 8s fdsafdaf infinite;
+}
+#screen img{
+  float:left;
+  width: 162px;
+  height: 108px;
+}
+#tv{
+  width: 162px;
+  height: 108px;
+  overflow: hidden;
+}
+@keyframes fdsafdaf {
+  0%{transform: translateX(0px)}
+  33%{transform: translateX(-162px)}
+  66%{transform: translateX(-324px)}
+  66.001%{transform:translateX(0px)}
+ 99%{transform: translateX(0px)}
+  /* 100%{transform: translateX(0px)} */
+}
