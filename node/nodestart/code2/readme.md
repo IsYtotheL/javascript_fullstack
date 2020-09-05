@@ -20,3 +20,21 @@
    + 而它的商品评论列表为了用户体验，而且也不需要 SEO 优化，所以采用客户端渲染
    https://www.cnblogs.com/muzishijie/p/11198315.html
    https://blog.csdn.net/wuhuimin521/article/details/79929834
+
+   ## 知识点
+   - 模块系统
+    + 核心模块
+    + 第三方模块
+    + 自己写的模块
+   - npm
+   - package.json
+   - Express
+    + 第三方 web 开发框架
+    + 高度封装了 http 模块
+    + 更加专注于业务，而非底层细节
+    + 知其所以然
+   - 增删改查  
+
+
+
+
