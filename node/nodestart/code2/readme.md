@@ -33,8 +33,18 @@
     + 高度封装了 http 模块
     + 更加专注于业务，而非底层细节
     + 知其所以然
-   - 增删改查  
+   - 增删改查 
+    + 使用文件来保存数据（锻炼异步编码）
+ - MongoDB
+  + （所有方法都封装好了）
 
-
-
-
++ art-template 和 jQuery 一毛钱关系都没有
++ each 是art-template 的模板语法，专属的
++ {{each 数组}}
++ <li>{{$value}}</li>
++ {{/each}} 这是art-template 模板引擎支持的语法，只能在模板字符串中使用
++ $.each(数组，function)
++ $('div').each(function)一般用于遍历jQuery选择器选择到的伪数组实例对象
++ forEach 是EcmaScript 5中的一个遍历函数，是JavaScript 原生支持的遍历方法 可以遍历任何被遍历的对象
++ jQuery 的 each 方法 和 forEach 几乎一致
++ 由于 forEach 是 EcmaScript 5 中的，所以低版本浏览器不支持
