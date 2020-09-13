@@ -1,0 +1,5 @@
+- npm init -y
+- npm install --save art-template
+- npm install --save express-art-template
+- npm i -S bootstrap
+- https://v3.bootcss.com/examples/dashboard/

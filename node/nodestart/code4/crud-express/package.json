@@ -1,5 +1,5 @@
 {
-  "name": "feedback-express",
+  "name": "crud-express",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "art-template": "^4.13.2",
+    "bootstrap": "^4.5.2",
     "express": "^4.17.1",
     "express-art-template": "^1.0.1"
   }
