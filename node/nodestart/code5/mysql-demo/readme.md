@@ -1,0 +1,4 @@
+- https://www.npmjs.com/
+- https://www.npmjs.com/package/mysql
+- npm init -y
+- npm i mysql
