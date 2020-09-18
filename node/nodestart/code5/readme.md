@@ -1,1 +1,8 @@
 - https://www.runoob.com/mongodb/mongodb-tutorial.html
+- 07promise
+  - json-server --version
+  - json-server --watch data  (data.json文件)
+  - localhost:3000/jobs
+  - localhost:3000/jobs/4  (id)
+  - hs -c-l -o
+  - npm i art-templte
