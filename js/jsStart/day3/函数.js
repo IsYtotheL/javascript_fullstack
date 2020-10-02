@@ -32,4 +32,73 @@ function gSum(num1,num2) {
   console.log(num1+num2); 
 }
 gSum(2,3) //5
-//119
+
+
+
+
+// 函数的返回值格式
+  // function 函数名() {
+  //   return 需要返回的结果;
+  // }
+  // 函数名();
+  // (1)我们的函数只是实现某种功能，最终结果需要返回给函数的调用着函数名()通过return 实现的
+  //（2）只要函数遇到return 就把后面的结果 返回给函数的调用者 函数名() = return 后面的结果
+  // 3.代码验证
+  function yz() {
+    return 666;
+  }
+  yz(); //没有结果
+  console.log(yz()); //666
+
+
+function cook(aru) {
+  return aru;
+}
+console.log(cook('cake')) //cake
+
+function gets(num3,num4) {
+  return num3 + num4;
+}
+console.log(gets(2,3)) //5
+
+function getMax(num5,num6) {
+  if(num5 > num6) {
+    return num5;
+  } else{
+    return num6;
+  }
+}
+console.log(getMax(8,9)) //9
+
+
+// 函数返回值注意事项
+// 1.return 终止函数
+function getT(num7,num8) {
+  return num7 + num8;
+  console.log(123); //retutn 后面的代码不会被执行
+}
+console.log(getT(5,6)) //11
+
+//2.return 只能返回一个值
+function fn(n1,n2) {
+  return n1,n2;//返回的结果是最后一个值
+}
+console.log(fn(1,2))//2
+
+
+// 3.我们求任意两个数的  加减乘除结果
+function getResult(n3,n4) {
+  return [n3+n4,n3-n4,n3*n4,n3/n4]
+}
+console.log(getResult(1,2))//[ 3, -1, 2, 0.5 ]
+
+// 4.我们函数如果有 return 则返回的是return 后面的值，
+// 如果函数没有return 则返回undefined
+function fun1() {
+  return 666; 
+}
+console.log(fun1());//666
+function fun2() {
+
+}
+console.log(fun2()) //undefined
