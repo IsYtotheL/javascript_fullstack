@@ -1,0 +1,70 @@
+<!-- Element.insertAdjacentHTML（）
+接口的insertAdjacentHTML()方法Element将指定的文本解析为HTML或XML，
+并将结果节点插入DOM树中的指定位置。它不会重新解析正在使用该元素的元素，
+因此不会破坏该元素内部的现有元素。这避免了额外的序列化步骤，使其比直接innerHTML操作要快得多。
+句法:
+element.insertAdjacentHTML(position, text);
+参量
+position
+甲DOMString表示相对于所述位置element; 必须是以下字符串之一：
+'beforebegin'：element本身之前。
+'afterbegin'：就在element第一个孩子之前。
+'beforeend'：就在的element最后一个孩子之后。
+'afterend'：element本身之后。
+text
+要解析为HTML或XML并将其插入树中的字符串。
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>面向对象 Tab</title>
+    <link rel="stylesheet" href="./styles/tab.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+    <main>
+        <h4>
+            Js 面向对象 动态添加标签页
+        </h4>
+        <div class="tabsbox" id="tab">
+            <!-- tab 标签 -->
+            <nav class="fisrstnav">
+                <ul>
+                    <!-- iconfont icon-guanbi 是删除图标 -->
+                    <li class="liactive"><span>测试1</span><span class="iconfont icon-guanbi"></span></li>
+                    <li id="cs"><span id="ces">测试2</span><span class="iconfont icon-guanbi"></span></li>
+                    <li><span>测试3</span><span class="iconfont icon-guanbi"></span></li>
+                </ul>
+                <div class="tabadd">
+                    <span>+</span>
+                </div>
+            </nav>
+
+            <!-- tab 内容 -->
+            <div class="tabscon">
+                <section class="conactive">测试1</section>
+                <section>测试2</section>
+                <section>测试3</section>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="js/tab.js"></script>
+</body>
+
+<script>
+sections = document.querySelectorAll('section');
+console.log(document.getElementsByClassName('iconfont icon-guanbi')) //HTMLCollection(3) [span.iconfont.icon-guanbi, span.iconfont.icon-guanbi, span.iconfont.icon-guanbi]
+console.log(document.getElementById("cs").parentNode) //<ul></ul>
+console.log(document.getElementById('ces').innerHTML) //测试2
+console.log(document.getElementById('ces').parentNode.innerHTML) //<span id="ces">测试2</span><span class="iconfont icon-guanbi"></span>
+console.log(sections)</script>
+<!-- NodeList(3) [section.conactive, section, section] -->
+</html>
