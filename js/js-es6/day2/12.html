@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // 借用父构造函数继承属性
+        // 1. 父构造函数
+        function Father(uname, age) {
+            // this 指向父构造函数的对象实例
+            this.uname = uname;
+            this.age = age;
+        }
+        Father.prototype.money = function() {
+            console.log(100000);
+
+        };
+        // 2 .子构造函数 
+        function Son(uname, age, score) {
+            // this 指向子构造函数的对象实例
+            Father.call(this, uname, age);
+            this.score = score;
+        };
+      
+//解决办法1： 
+Son.prototype = Father.prototype;//这样会有问题，子添加方法时，父也会添加
+Son.prototype.exam = function() {
+            console.log('孩子要考试');
+
+        }
+var son = new Son('刘德华', 18, 100);
+        console.log(son);
+        // 可以看出里面没有money这个方法，
+        //因为这个方法在原型链上，构造函数里面没有
+        // Son
+        //     uname: "刘德华"
+        //     age: 18
+        //     score: 100
+        //     __proto__:
+        //     constructor: ƒ Son(uname, age, score)
+        //     __proto__: Object
+// 解决方法1
+//         Son {uname: "刘德华", age: 18, score: 100}
+            // uname: "刘德华"
+            // age: 18
+            // score: 100
+            // __proto__:
+            // money: ƒ ()
+            // exam: ƒ ()
+            // constructor: ƒ Father(uname, age)
+            // __proto__: Object
+//父原型上也添加了exam不合理
+console.log(Father.prototype)
+// {money: ƒ, exam: ƒ, constructor: ƒ}
+// money: ƒ ()
+// exam: ƒ ()
+// constructor: ƒ Father(uname, age)
+// __proto__: Object
+    </script>
+</body>
+</html>

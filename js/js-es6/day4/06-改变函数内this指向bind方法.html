@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- 语法
+function.bind(thisArg[, arg1[, arg2[, ...]]])
+参数
+thisArg
+调用绑定函数时作为 this 参数传递给目标函数的值。 
+如果使用new运算符构造绑定函数，则忽略该值。
+当使用 bind 在 setTimeout 中创建一个函数（作为回调提供）时，
+作为 thisArg 传递的任何原始值都将转换为 object。
+如果 bind 函数的参数列表为空，或者thisArg是null或undefined，
+执行作用域的 this 将被视为新函数的 thisArg。
+arg1, arg2, ...
+当目标函数被调用时，被预置入绑定函数的参数列表中的参数。
+返回值
+返回一个原函数的拷贝，并拥有指定的 this 值和初始参数。 -->
+<body>
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <script>
+        // 改变函数内this指向  js提供了三种方法  call()  apply()  bind()
+
+        // 3. bind()  绑定 捆绑的意思
+        var o = {
+            name: 'andy'
+        };
+
+        function fn(a, b) {
+            console.log(this);
+            console.log(a + b);
+
+
+        };
+        fn(2,5)//window 7
+        var f = fn.bind(o, 1, 2);
+        f();
+        // Object
+        //     name: "andy"
+        //     __proto__: Object
+        // 3
+        // 1. 不会调用原来的函数   可以改变原来函数内部的this 指向
+        // 2. 返回的是原函数改变this之后产生的新函数
+        // 3. 如果有的函数我们不需要立即调用,但是又想改变这个函数内部的this指向此时用bind
+        // 4. 我们有一个按钮,当我们点击了之后,就禁用这个按钮,3秒钟之后开启这个按钮
+        // var btn1 = document.querySelector('button');
+        // btn1.onclick = function() {
+        //     this.disabled = true; // 这个this 指向的是 btn 这个按钮
+        //     // var that = this;
+        //     setTimeout(function() {
+        //         // that.disabled = false; // 定时器函数里面的this 指向的是window
+        //         this.disabled = false; // 此时定时器函数里面的this 指向的是btn
+        //     }.bind(this), 3000); // 这个this 指向的是btn 这个对象
+        // }
+// disabled
+// 此布尔属性表示用户不能与button交互。
+        var btns = document.querySelectorAll('button');
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = function() {
+              console.log(this) //<button disabled>点击</button>
+                this.disabled = true;
+                setTimeout(function() {
+                  console.log(this) //<button>点击</button>
+                    this.disabled = false;
+                    // console.log(this)
+                }.bind(this), 2000); //不能用call等绑定，我们需要2s后自动调用
+            }
+        }
+    </script>
+</body>
+
+</html>

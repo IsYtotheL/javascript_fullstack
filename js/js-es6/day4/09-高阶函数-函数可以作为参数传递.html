@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 高阶函数是对其他函数进行操作的函数，
+他接收函数作为参数或将函数作为返回值输出 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        // 高阶函数- 函数可以作为参数传递
+        function fn(a, b, callback) {
+            console.log(a + b);
+            callback && callback(); //如果回调函数存在，则执行该回调函数。
+            //if (callback) {callback()};
+           
+        }
+        fn(1, 2, function() {
+            console.log('我是最后调用的');
+
+        });
+        $("div").animate({
+            left: 500
+        }, function() {
+            $("div").css("backgroundColor", "purple");
+        })
+    </script>
+</body>
+
+</html>

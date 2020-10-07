@@ -1,0 +1,42 @@
+console.log(Array) //[Function: Array]
+console.log(Array)
+console.log(Array.prototype) //[] node
+// 浏览器
+// [constructor: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, find: ƒ, …]
+// sum: ƒ ()
+// length: 0
+// constructor: ƒ Array()
+// concat: ƒ concat()
+// copyWithin: ƒ copyWithin()
+// fill: ƒ fill()
+// find: ƒ find()
+// findIndex: ƒ findIndex()
+// lastIndexOf: ƒ lastIndexOf()
+// pop: ƒ pop()
+// push: ƒ push()
+// reverse: ƒ reverse()
+// shift: ƒ shift()
+// unshift: ƒ unshift()
+// slice: ƒ slice()
+// sort: ƒ sort()
+// splice: ƒ splice()
+// includes: ƒ includes()
+// indexOf: ƒ indexOf()
+// join: ƒ join()
+// keys: ƒ keys()
+// entries: ƒ entries()
+// values: ƒ values()
+// forEach: ƒ forEach()
+// filter: ƒ filter()
+// flat: ƒ flat()
+// flatMap: ƒ flatMap()
+// map: ƒ map()
+// every: ƒ every()
+// some: ƒ some()
+// reduce: ƒ reduce()
+// reduceRight: ƒ reduceRight()
+// toLocaleString: ƒ toLocaleString()
+// toString: ƒ toString()
+// Symbol(Symbol.iterator): ƒ values()
+// Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}
+// __proto__: Object

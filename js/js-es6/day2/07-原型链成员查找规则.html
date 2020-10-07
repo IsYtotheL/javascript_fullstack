@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<!-- 1.9 JavaScript的成员查找机制(规则)
+①当访问一个对象的属性(包括方法)时,首先查找这个对象自身有没有该属性
+2.如果没有就查找它的原型(也就是__proto__指向的 prototype原型对象)
+③如果还没有就查找原型对象的原型( Object的原型对象)
+依此类推一直找到Object为止(null) -->
+<body>
+    <script>
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+        }
+        Star.prototype.sing = function() {
+            console.log('我会唱歌');
+
+        }
+        Star.prototype.sex = '女';
+        // Object.prototype.sex = '男';
+        var ldh = new Star('刘德华', 18);
+        ldh.sex = '男';
+        console.log(ldh.sex);//男
+        console.log(Object.prototype);
+        //Object
+            // constructor: ƒ Object()
+            // __defineGetter__: ƒ __defineGetter__()
+            // __defineSetter__: ƒ __defineSetter__()
+            // hasOwnProperty: ƒ hasOwnProperty()
+            // __lookupGetter__: ƒ __lookupGetter__()
+            // __lookupSetter__: ƒ __lookupSetter__()
+            // isPrototypeOf: ƒ isPrototypeOf()
+            // propertyIsEnumerable: ƒ propertyIsEnumerable()
+            // toString: ƒ toString()
+            // valueOf: ƒ valueOf()
+            // toLocaleString: ƒ toLocaleString()
+            // get __proto__: ƒ __proto__()
+            // set __proto__: ƒ __proto__()
+        console.log(ldh);
+        // Star
+        //     uname: "刘德华"
+        //     age: 18
+        //     sex: "男"
+        //     __proto__: Object
+
+        console.log(Star.prototype);
+        // Object
+        //     sing: ƒ ()
+        //     sex: "女"
+        //     constructor: ƒ Star(uname, age)
+        //     __proto__: Object
+        // ldh没有toString()方法 但是Object有
+        console.log(ldh.toString());//[object Object] 
+    </script>
+</body>
+
+</html>
