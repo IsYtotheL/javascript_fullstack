@@ -7,5 +7,5 @@
   console.log(age)//30
   console.log(sex)//'男'
   
-  let {name: myName} = person;
+  let {name: myName} = person;//左边的name只用于属性匹配，右边的myName是真正的变量
   console.log(myName)//lisi

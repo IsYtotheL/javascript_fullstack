@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>箭头函数面试题</title>
+</head>
+<body>
+	<script type="text/javascript">
+  // 箭头函数定义在了obj对象里面
+  // 但是obj不能产生作用域
+  // 所以箭头函数定义在了全局作用域下
+		var age = 100;
+
+		var obj = {
+			age: 20,
+			say: () => {
+        alert(this.age)
+        console.log(this) //Window {parent: Window, opener: null, top: Window, length: 0, frames: Window, …}
+			}
+		}
+
+		obj.say();//100
+	</script>
+</body>
+</html>
