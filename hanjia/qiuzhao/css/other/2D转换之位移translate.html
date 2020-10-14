@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+  <!-- transform(转换)，可以实现元素的位移、旋转、缩放等效果
+    可以简单理解为变形
+    移动: translate
+    旋转：rotate
+    缩放: scale
+
+    语法：
+    transform:translate(x,y) //往右x,左y
+    transform:translateX(n);
+    transform:translateY(n);
+
+
+    重点：
+    定义2D转换中的移动，沿着x和y轴移动元素
+    translate最大的优点：不会影响到其他元素的位置
+    translate中的百分比单位是相对于自身元素的tranlate(50%,50%);
+    对行内标签没有效果
+  -->
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      /* transform: translate(100px,100px); */
+    }
+  div:first-child {
+    transform: translateY(100px)
+  }
+  div:last-child {
+    background-color: green;
+  }
+  img{
+    width: 50px;
+    height: 50px;
+  }
+  img:hover{
+    transform: translateY(10px)
+  }
+  </style>
+<body>
+  <div><img src="../css/img/1.jpg" alt=""></div>
+  <div></div>
+
+  
+
+</body>
+</html>
