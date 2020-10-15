@@ -1,0 +1,74 @@
+<!-- 3.2 表单的组成
+在 HTML 中，一个完整的表单通常由表单域、表单控件（也称为表单元素）和 提示信息3个部分构成。
+3.3 表单域
+表单域是一个包含表单元素的区域。 在 HTML 标签中， <form> 标签用于定义表单域，以实现用户信息的收集和传递。
+<form> 会把它范围内的表单元素信息提交给服务器. <form action=“url地址” method=“提交方式” name=“表单域名称">
+ 各种表单元素控件
+</form>
+action      url地址     指定接收并处理表单数据的服务器程序的url地址
+method      get/post    提交方式
+name        名称         指定表单名称 区分同一页面的多个表单域 -->
+
+
+<!-- 3.4.1 <input> 表单元素
+2. 页面中的表单元素很多，如何区别不同的表单元素? 答: name 属性：当前 input 表单的名字，后台可以通过这个 name 属性找到这个表单。页面中的表单很多，
+name 的主要作用就是用于区别不同的表单。
+用户名: <input type="text" value="请输入用户名" name="username" /> 
+ name 属性后面的值，是自定义的
+ radio (或者checkbox）如果是一组，我们必须给他们命名相同的名字 
+<input type="radio" name="sex" />男 <input type="radio" name="sex" />女 -->
+
+
+<!-- 3.4.2 <label> 标签
+    <label> 标签为 input 元素定义标注（标签）。
+    <label> 标签用于绑定一个表单元素, 当点击<label> 标签内的文本时，浏览器就会自动将焦点(光标)转到或者
+    选择对应的表单元素上,用来增加用户体验.
+    语法： 
+    <label for="sex">男</label>
+    <input type="radio" name="sex" id="sex" />
+    核心： <label> 标签的 for 属性应当与相关元素的 id 属性相同。 -->
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>label标签</title>
+        </head>
+        <body>
+            <form action="xxx.php" method="get"></form>
+                <!-- text 文本框 用户可以里面输入任何文字 -->
+               用户名: <input type="text" name="username" value="请输入用户名" maxlength="6">   <br> 
+               <!-- password 密码框 用户看不见输入的密码 -->
+               密码: <input type="password" name="pwd" >  <br> 
+               <!-- radio 单选按钮  可以实现多选一 -->
+               <!-- name 是表单元素名字 这里性别单选按钮必须有相同的名字name 才可以实现多选1 -->
+               <!-- 单选按钮和复选框可以设置checked 属性, 当页面打开的时候就可以默认选中这个按钮 -->
+               性别: 男 <input type="radio" name="sex" value="男"> 女  <input type="radio" name="sex" value="女" checked="checked"> 人妖   <input type="radio" name="sex" value="人妖">   <br> 
+               <!-- checkbox 复选框  可以实现多选 -->
+               爱好: 吃饭 <input type="checkbox" name="hobby" value="吃饭"> 睡觉 <input type="checkbox" name="hobby">  打豆豆 <input type="checkbox" name="hobby" checked="checked"> 
+               <br> 
+               <!-- 点击了提交按钮,可以把 表单域 form 里面的表单元素 里面的值 提交给后台服务器 -->
+               <input type="submit" value="免费注册">
+               <!-- 重置按钮可以还原表单元素初始的默认状态 -->
+               <input type="reset" value="重新填写">
+               <!-- 普通按钮 button  后期结合js 搭配使用-->
+               <input type="button" value="获取短信验证码"> <br>
+               <!-- 文件域 使用场景 上传文件使用的 -->
+               上传头像:  <input type="file" >
+               籍贯: 
+               <select>
+                   <option>山东</option>
+                   <option>北京</option>
+                   <option>天津</option>
+                   <option selected="selected">火星</option>
+               </select><br>
+               <textarea cols="50" rows="5">反馈留言是textarea来做的 </textarea>
+           </form>
+           <p></p>
+        
+           <label for="text"> 用户名:</label> <input type="text" id="text" >
+           <input type="radio" id="nan" name="sex"> <label for="nan">男</label>
+           <input type="radio" id="nv"  name="sex"> <label for="nv">女</label>
+        </body>
+        </html>

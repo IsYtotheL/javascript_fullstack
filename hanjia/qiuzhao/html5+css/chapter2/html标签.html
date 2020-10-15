@@ -1,0 +1,189 @@
+<!-- 1.2 表格的基本语法
+<table>
+ <tr>
+ <td>单元格内的文字</td>
+ ...
+ </tr>
+ ...
+</table>
+1. <table> </table> 是用于定义表格的标签。
+2. <tr> </tr> 标签用于定义表格中的行，必须嵌套在 <table> </table>标签中。
+3. <td> </td> 用于定义表格中的单元格，必须嵌套在<tr></tr>标签中。
+4. 字母 td 指表格数据（table data），即数据单元格的内容。 -->
+
+<!-- 
+1.3 表头单元格标签
+一般表头单元格位于表格的第一行或第一列，表头单元格里面的文本内容加粗居中显示. <th> 标签表示 HTML 表格的表头部分(table head 的缩写) <table>
+ <tr>
+ <th>姓名</th>
+ ...
+ </tr>
+ ...
+</table> -->
+
+
+
+<!-- 1.4 表格属性 
+align          left、center、right            规定表格相对周围元素的对齐方式
+border         1 或 ""                        规定表格单元是否拥有边框，默认为""，表示没有边框
+cellpadding    像素值                         规定单元边沿与其内容之间的空白，默认1像素
+cellspacing    像素值                         规定单元格之间的空白，默认2像素
+width          像素值或百分比                  规定表格的宽度
+-->
+
+<!-- 
+1.5 表格结构标签
+1. <thead></thead>：用于定义表格的头部。<thead> 内部必须拥有 <tr> 标签。 一般是位于第一行。
+2. <tbody></tbody>：用于定义表格的主体，主要用于放数据本体 。
+3. 以上标签都是放在 <table></table> 标签中。 -->
+
+
+<!-- 1.6 合并单元格
+合并单元格方式：  跨行合并：rowspan="合并单元格的个数" 
+ 跨列合并：colspan="合并单元格的个数" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>今日小说排行榜</title>
+</head>
+<body>
+    <table align="center" width="500" height="249" border="1" cellspacing="0">
+    <thead>
+        <tr>
+            <th>排名</th>
+            <th>关键词</th>
+            <th>趋势</th>
+            <th>进入搜索</th>
+            <th>最近七日</th>
+            <th>相关链接</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>鬼吹灯</td>
+            <td><img src="down.jpg"></td>
+            <td>456</td>
+            <td>123</td>
+            <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
+        </tr>
+
+        <tr>
+                <td>1</td>
+                <td>鬼吹灯</td>
+                <td><img src="down.jpg"></td>
+                <td>456</td>
+                <td>123</td>
+                <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
+        </tr>
+        <tr>
+                <td>3</td>
+                <td>西游记</td>
+                <td><img src="up.jpg"></td>
+                <td>456</td>
+                <td>123</td>
+                <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
+        </tr>
+        <tr>
+                <td>1</td>
+                <td>鬼吹灯</td>
+                <td><img src="down.jpg"></td>
+                <td>456</td>
+                <td>123</td>
+                <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
+        </tr>
+        <tr>
+                <td>1</td>
+                <td>鬼吹灯</td>
+                <td><img src="down.jpg"></td>
+                <td>456</td>
+                <td>123</td>
+                <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
+        </tr>
+        <tr>
+                <td>1</td>
+                <td>鬼吹灯</td>
+                <td><img src="down.jpg"></td>
+                <td>456</td>
+                <td>123</td>
+                <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
+        </tr>
+    </tbody>           
+    </table>
+
+    <h4>您喜欢的食物?</h4>
+    <ul>
+        <li>榴莲</li>
+        <li>臭豆腐</li>
+        <li>鲱鱼罐头</li>
+        <li>
+            <p>123</p>
+        </li>
+    </ul>
+
+
+    <h4>粉丝排行榜</h4>
+    <ol>
+        <li>刘德华 10000</li>
+        <li>刘若英 1000</li>
+        <li>pink老师 1</li>
+    </ol>
+
+
+    <dl>
+        <dt>关注我们</dt>
+        <dd>新浪微博</dd>
+        <dd>官方微信</dd>
+        <dd>联系我们</dd>
+        <dt>关注我们</dt>
+        <dd>新浪微博</dd>
+        <dd>官方微信</dd>
+        <dd>联系我们</dd>
+    </dl>
+</body>
+</html>
+
+<!-- 表格是用来显示数据的，那么列表就是用来布局的。
+列表最大的特点就是整齐、整洁、有序，它作为布局会更加自由和方便。
+根据使用情景不同，列表可以分为三大类：无序列表、有序列表和自定义列表。 
+
+2.1 无序列表（重点）
+<ul> 标签表示 HTML 页面中项目的无序列表，一般会以项目符号呈现列表项，而列表项使用 <li> 标签定义。
+无序列表的基本语法格式如下： <ul>
+ <li>列表项1</li>
+ <li>列表项2</li>
+ <li>列表项3</li>
+ ...
+</ul>
+1. 无序列表的各个列表项之间没有顺序级别之分，是并列的。
+2. <ul></ul> 中只能嵌套 <li></li>，直接在 <ul></ul> 标签中输入其他标签或者文字的做法是不被允许的。
+3. <li> 与 </li> 之间相当于一个容器，可以容纳所有元素。
+4. 无序列表会带有自己的样式属性，但在实际使用时，我们会使用 CSS 来设置。
+
+2.2 有序列表（理解）
+有序列表即为有排列顺序的列表，其各个列表项会按照一定的顺序排列定义。 在 HTML 标签中，<ol> 标签用于定义有序列表，列表排序以数字来显示，并且使用 <li> 标签来定义列表项。
+有序列表的基本语法格式如下：
+<ol>
+ <li>列表项1</li>
+ <li>列表项2</li>
+ <li>列表项3</li>
+ ...
+</ol>
+1. <ol></ol>中只能嵌套<li></li>，直接在<ol></ol>标签中输入其他标签或者文字的做法是不被允许的。
+2. <li> 与 </li>之间相当于一个容器，可以容纳所有元素。
+3. 有序列表会带有自己样式属性，但在实际使用时，我们会使用 CSS 来设置。
+
+2.3 自定义列表（重点）
+在 HTML 标签中，<dl> 标签用于定义描述列表（或定义列表），该标签会与 <dt>（定义项目/名字）和
+<dd>（描述每一个项目/名字）一起使用。
+其基本语法如下：
+<dl>
+ <dt>名词1</dt>
+ <dd>名词1解释1</dd>
+ <dd>名词1解释2</dd>
+</dl>
+1. <dl></dl> 里面只能包含 <dt> 和 <dd>。
+2. <dt> 和 <dd>个数没有限制，经常是一个<dt> 对应多个<dd>。-->
