@@ -1,0 +1,63 @@
+<!-- 1.5 伪类选择器
+伪类选择器用于向某些选择器添加特殊的效果，比如给链接添加特殊效果，或选择第1个，第n个元素。
+伪类选择器书写最大的特点是用冒号（:）表示，比如 :hover 、 :first-child 。
+因为伪类选择器很多，比如有链接伪类、结构伪类等，所以这里先给大家讲解常用的链接伪类选择器。 -->
+
+
+<!-- 
+1.6 链接伪类选择器
+一 链接伪类选择器注意事项. 二 链接伪类选择器实际开发中的写法.
+链接伪类选择器注意事项
+1. 为了确保生效，请按照 LVHA 的循顺序声明 :link－:visited－:hover－:active。
+2. 记忆法：love hate 或者 lv 包包 hao 。
+3. 因为 a 链接在浏览器中具有默认样式，所以我们实际工作中都需要给链接单独指定样式。 -->
+
+<!-- 1.7 :focus 伪类选择器
+:focus 伪类选择器用于选取获得焦点的表单元素。
+焦点就是光标，一般情况 <input> 类表单元素才能获取，因此这个选择器也主要针对于表单元素来说。 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复合选择器之链接伪类选择器</title>
+    <style>
+        /* 1.未访问的链接 a:link  把没有点击过的(访问过的)链接选出来 */
+        a:link {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /*2. a:visited 选择点击过的(访问过的)链接 */
+        a:visited {
+            color: orange;
+        }
+
+        /*3. a:hover 选择鼠标经过的那个链接 */
+        a:hover {
+            color: skyblue;
+        }
+
+        /* 4. a:active 选择的是我们鼠标正在按下还没有弹起鼠标的那个链接 */
+        a:active {
+            color: green;
+        }
+          /* // 把获得光标的input表单元素选取出来 */
+          input:focus {
+            background-color: pink;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">小猪佩奇</a>
+    <a href="http://www.xxxxxxxx.com">未知的网站</a>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+</body>
+
+</html>
