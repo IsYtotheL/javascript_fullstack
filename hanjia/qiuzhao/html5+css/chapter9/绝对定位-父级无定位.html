@@ -1,0 +1,43 @@
+<!-- 1.5 绝对定位 absolute（重要）
+绝对定位是元素在移动位置的时候，是相对于它祖先元素来说的（拼爹型）。
+语法：
+选择器 { position: absolute; }
+绝对定位的特点：（务必记住）
+1. 如果没有祖先元素或者祖先元素没有定位，则以浏览器为准定位（Document 文档）。
+2. 如果祖先元素有定位（相对、绝对、固定定位），则以最近一级的有定位祖先元素为参考点移动位置。
+3. 绝对定位不再占有原先的位置。（脱标）
+所以绝对定位是脱离标准流的。 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绝对定位-无父亲或者父亲无定位</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+        .son {
+            position: absolute;
+            /* top: 10px;
+            left: 10px; */
+            /* top: 100px;
+            right: 200px; */
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+            <div class="son"></div>
+    </div>
+   
+</body>
+</html>
