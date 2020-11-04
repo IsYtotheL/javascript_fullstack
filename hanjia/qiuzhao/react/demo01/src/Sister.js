@@ -14,13 +14,13 @@ class Sister extends Component {
   componentWillMount() {
     console.log('componentWillMount--组件将要挂载')
   }
-  componentDidMount() {
-    // console.log('componentDidMount--组件挂载完成')
-    axios.post('http://web-api.juejin.im/v3/web/wbbr/bgeda')
-    .then((res)=>{console.log('axios获取数据成功'+JSON.stringify(res))})
-    .catch((error)=> {console.log('axios 获取数据失败'+error)})
+  // componentDidMount() {
+  //   // console.log('componentDidMount--组件挂载完成')
+  //   axios.post('http://web-api.juejin.im/v3/web/wbbr/bgeda')
+  //   .then((res)=>{console.log('axios获取数据成功'+JSON.stringify(res))})
+  //   .catch((error)=> {console.log('axios 获取数据失败'+error)})
     
-  }
+  // }
   shouldComponentUpdate() {
     console.log('shouldComponentUpdate')
     // index.js:1 Warning: Sister.shouldComponentUpdate(): 

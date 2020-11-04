@@ -69,5 +69,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+- npm install antd --save
+- npm install -g cnpm --registry=https://registry.npm.taobao.org
+-  cnpm install antd --save
+- react@^16.9.0
+-  cnpm install --save react-dom@16.9.0
+- npm install --save react@16.9.0
+- cnpm install --save axios
+- cnpm install --save redux-thunk
+- cnpm install --save redux-saga
+- cnpm install --save react-redux
 
--npm install react-transition-group --save

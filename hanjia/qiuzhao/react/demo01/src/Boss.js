@@ -18,6 +18,7 @@ class Boss extends Component {
   }
 
   toToggole() {
+    // console.log('1')
     this.setState({
       isShow:this.state.isShow?false:true
     })
