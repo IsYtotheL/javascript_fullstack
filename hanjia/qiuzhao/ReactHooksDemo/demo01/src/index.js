@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import Example from './Example'
-import Example7 from './Example7'
+import Example13 from './Example13'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Example7 />
+    <Example13 />
   </React.StrictMode>,
   document.getElementById('root')
 );
